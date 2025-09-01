@@ -15,7 +15,7 @@ function Adsbar() {
 }
 
 function Example() {
-  return <div style={{height: "1500px"}}></div>
+  return <div style={{ height: "1500px" }}></div>;
 }
 
 export default function Home() {

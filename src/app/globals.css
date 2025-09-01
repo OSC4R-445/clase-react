@@ -46,7 +46,8 @@ header > div {
   width: 45%;
 }
 header > div > span,
-header > div input {
+header > div input,
+header > div img {
   margin-right: 3%;
 }
 header > div:last-child {
