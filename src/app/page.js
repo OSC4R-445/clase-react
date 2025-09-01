@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Header from "./components/header";
+import Products from "./components/products/products";
 
 function Adsbar() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
     <>
       <Adsbar />
       <Header />
+      <Products />
       <Example />
     </>
   );
