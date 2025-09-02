@@ -20,11 +20,14 @@ function Example() {
 }
 
 export default function Home() {
+  //valor de variable prop que se enviará al componente hijo 'products'
+  let titleProductSize = "3em";
   return (
     <>
       <Adsbar />
       <Header />
-      <Products />
+      {/* Se envia el valor de la proiedad titleProductSize al componente Products */}
+      <Products titleSize={titleProductSize} />
       <Example />
     </>
   );
