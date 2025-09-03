@@ -1,25 +1,12 @@
 :root {
   --background: #0a0a0a;
-  --foreground: #ededed;
+  --foreground: #bbbbbb;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-}
-
-#adsBar {
-  background: #23323b;
-  height: 5vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#adsBar > * {
-  color: #cacaca;
-  font-size: 0.75rem;
-  margin: 1.5%;
 }
 
 body {
@@ -30,6 +17,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 header {
+  color: #d1d1d1;
   background: #5a5a5a;
   display: flex;
   justify-content: space-between;

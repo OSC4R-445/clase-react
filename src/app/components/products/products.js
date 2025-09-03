@@ -8,29 +8,72 @@ export default function Products({ titleSize = "2em" }) {
     title: "Amplía tu mundo con Meta Quest 3",
     productsArray: [
       {
+        id: 1,
         name: "Meta Quest 3",
         img: "https://lookaside.fbsbx.com/elementpath/media/?media_id=1212867420030268&version=1752567331&transcode_extension=webp",
         qty: 10,
+        price: 500,
       },
       {
+        id: 2,
         name: "Meta Quest Pro",
         img: "https://lookaside.fbsbx.com/elementpath/media/?media_id=482278464759507&version=1742998958&transcode_extension=webp",
         qty: 5,
+        price: 300,
       },
       {
+        id: 3,
         name: "Compara las gafas",
         img: "https://lookaside.fbsbx.com/elementpath/media/?media_id=1069558337847743&version=1730103018&transcode_extension=webp",
         qty: 0,
+        price: 0,
+      },
+      {
+        id: 4,
+        name: "Accsesorios",
+        img: "https://lookaside.fbsbx.com/elementpath/media/?media_id=506273455145033&version=1751921873&transcode_extension=webp",
+        qty: 7,
+        price: 250,
+      },
+      {
+        id: 5,
+        name: "Aplicaciones y juegos",
+        img: "https://lookaside.fbsbx.com/elementpath/media/?media_id=492080576853052&version=1731932226&transcode_extension=webp",
+        qty: 0,
+        price: 100,
+      },
+      {
+        id: 6,
+        name: "Tarjetas de regalo",
+        img: "https://lookaside.fbsbx.com/elementpath/media/?media_id=1529671570979745&version=1738831591&transcode_extension=webp",
+        qty: 4,
+        price: 0,
       },
     ],
   };
+
+  //Ejemplo de filtrado por price
+  const filteredProducts = products.productsArray.filter(
+    (product) => product.price > 0
+  );
+
+  //Ejemplo de mapeo de los datos
+  const productsArrayMapped = filteredProducts.map((product) => (
+    product.qty > 0 ? (
+    <div key={product.id}>
+          <Image src={product.img} alt={product.name} width={150} height={85} />
+          <figcaption>{product.name}</figcaption>
+          <figcaption>Quantity : {product.qty}</figcaption>
+    </div>) : null
+  ));
 
   return (
     <>
       <div className={styleProduct.containerProducts}>
         <h1 style={{ fontSize: titleSize }}>{products.title}</h1>
         <div className={styleProduct.containerCards}>
-          {products.productsArray[0].qty > 0 ? (
+          {productsArrayMapped}
+          {/* {products.productsArray[0].qty > 0 ? (
             <div className={styleProduct.card}>
               <Image
                 className={styleProduct.imgProduct}
@@ -43,7 +86,7 @@ export default function Products({ titleSize = "2em" }) {
                 {products.productsArray[0].name}
               </p>
             </div>
-          ) : null}
+          ) : null} */}
         </div>
       </div>
     </>
