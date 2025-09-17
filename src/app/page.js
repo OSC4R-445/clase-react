@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Header from "./components/header";
 import Products from "./components/products/products";
+import Metaq3 from "./components/metaQ3/metaq3";
 
 function Adsbar() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <Header />
       {/* Se envia el valor de la proiedad titleProductSize al componente Products */}
       <Products titleSize={titleProductSize} />
+      <Metaq3 dato={"comprame ahora!"} />
       <Example />
     </>
   );
